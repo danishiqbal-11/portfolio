@@ -1,1 +1,1 @@
-Add company analysis section
+Implement routing for company analysis

@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Container, Alert, Row, Col, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Investment = () => {
   return (
@@ -33,7 +35,7 @@ const Investment = () => {
               <Card.Body>
                 <Card.Title>Caplin Point Laboratories Ltd</Card.Title>
                 <Card.Text>
-                  Analysis coming soon.
+                  <Link to="/caplin-point">Read Analysis</Link>
                 </Card.Text>
               </Card.Body>
             </Card>
