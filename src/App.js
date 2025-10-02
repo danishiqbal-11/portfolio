@@ -26,6 +26,7 @@ import AdaniPorts from './components/investments/AdaniPorts';
 import HindalcoIndustries from './components/investments/HindalcoIndustries';
 import AdaniPower from './components/investments/AdaniPower';
 import Cipla from './components/investments/Cipla';
+import PeterLynchCompanies from './components/investments/blogs/PeterLynchCompanies';
 import './App.css';
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
             <Route path="/investment/hindalco-industries" element={<HindalcoIndustries />} />
             <Route path="/investment/adani-power" element={<AdaniPower />} />
             <Route path="/investment/cipla" element={<Cipla />} />
+            <Route path="/investment/blogs/peter-lynch-companies" element={<PeterLynchCompanies />} />
           </Routes>
         </main>
         <Footer />
