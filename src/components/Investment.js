@@ -124,7 +124,7 @@ const Investment = () => {
           </Col>
           <Col md={4} className="mb-4">
             <Card as={Link} to="/investment/muthoot-finance" className="text-decoration-none h-100 shadow-sm">
-              <Card.Body className_="d-flex flex-column">
+              <Card.Body className="d-flex flex-column">
                 <div className="text-center">
                   <i className="bi bi-building fs-1 text-primary"></i>
                   <Card.Title className="mt-3">Muthoot Finance Limited</Card.Title>
@@ -141,6 +141,71 @@ const Investment = () => {
                 <div className="text-center">
                   <i className="bi bi-building fs-1 text-primary"></i>
                   <Card.Title className="mt-3">PI Industries Limited</Card.Title>
+                </div>
+                <div className="text-center mt-auto">
+                  <span className="btn btn-primary">Read Analysis</span>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4} className="mb-4">
+            <Card as={Link} to="/investment/container-corporation" className="text-decoration-none h-100 shadow-sm">
+              <Card.Body className="d-flex flex-column">
+                <div className="text-center">
+                  <i className="bi bi-building fs-1 text-primary"></i>
+                  <Card.Title className="mt-3">Container Corporation of India Limited</Card.Title>
+                </div>
+                <div className="text-center mt-auto">
+                  <span className="btn btn-primary">Read Analysis</span>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4} className="mb-4">
+            <Card as={Link} to="/investment/adani-ports" className="text-decoration-none h-100 shadow-sm">
+              <Card.Body className="d-flex flex-column">
+                <div className="text-center">
+                  <i className="bi bi-building fs-1 text-primary"></i>
+                  <Card.Title className="mt-3">Adani Ports and Special Economic Zone Limited</Card.Title>
+                </div>
+                <div className="text-center mt-auto">
+                  <span className="btn btn-primary">Read Analysis</span>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4} className="mb-4">
+            <Card as={Link} to="/investment/hindalco-industries" className="text-decoration-none h-100 shadow-sm">
+              <Card.Body className="d-flex flex-column">
+                <div className="text-center">
+                  <i className="bi bi-building fs-1 text-primary"></i>
+                  <Card.Title className="mt-3">Hindalco Industries Limited</Card.Title>
+                </div>
+                <div className="text-center mt-auto">
+                  <span className="btn btn-primary">Read Analysis</span>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4} className="mb-4">
+            <Card as={Link} to="/investment/adani-power" className="text-decoration-none h-100 shadow-sm">
+              <Card.Body className="d-flex flex-column">
+                <div className="text-center">
+                  <i className="bi bi-building fs-1 text-primary"></i>
+                  <Card.Title className="mt-3">Adani Power Limited</Card.Title>
+                </div>
+                <div className="text-center mt-auto">
+                  <span className="btn btn-primary">Read Analysis</span>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4} className="mb-4">
+            <Card as={Link} to="/investment/cipla" className="text-decoration-none h-100 shadow-sm">
+              <Card.Body className="d-flex flex-column">
+                <div className="text-center">
+                  <i className="bi bi-building fs-1 text-primary"></i>
+                  <Card.Title className="mt-3">Cipla Limited</Card.Title>
                 </div>
                 <div className="text-center mt-auto">
                   <span className="btn btn-primary">Read Analysis</span>
