@@ -9,7 +9,7 @@ const About = () => {
       <div className="text-center">
         <Image src={profileImage} roundedCircle fluid style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
         <h1 className="mt-4">Danish Iqbal</h1>
-        <p className="lead text-muted">Software Engineer | Investor | Entrepreneur</p>
+        <p className="lead text-muted">Software Engineer | Investor </p>
       </div>
       <hr />
       <h2 className="my-4 text-center">Experience</h2>
