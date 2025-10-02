@@ -1,1 +1,1 @@
-Implement routing for company analysis
+Restructure website with About, Technology, and Investment pages
