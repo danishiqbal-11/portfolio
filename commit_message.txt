@@ -1,1 +1,1 @@
-Restructure website with About, Technology, and Investment pages
+Update home page with image and achievements, and rename navigation links

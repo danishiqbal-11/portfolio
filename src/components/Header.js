@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -11,9 +10,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">About Me</Nav.Link>
-            <Nav.Link as={Link} to="/technology">Technology</Nav.Link>
-            <Nav.Link as={Link} to="/investment">Investment</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/technology">Tech Blogs</Nav.Link>
+            <Nav.Link as={Link} to="/investment">Investment Blogs</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
