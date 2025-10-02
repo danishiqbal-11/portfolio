@@ -18,3 +18,44 @@
 **Final Outcome:**
 
 *   The portfolio website is now deployed and will be available at: https://danishiqbal-11.github.io/portfolio/
+
+## Update: October 2, 2025
+
+**Goal:** Update design of Main page, Investment page, AI subsections, and add a blog post.
+
+**Tasks Performed:**
+
+1.  **Updated Design of Technology Page:**
+    *   Added Bootstrap Icons CDN to `public/index.html`.
+    *   Redesigned `src/components/Technology.js` using `Card` components, a grid layout, and icons.
+
+2.  **Updated Design of Main Page (`About.js`):**
+    *   Redesigned `src/components/About.js` with background color, card shadows, and icons for section titles.
+
+3.  **Updated Design of Investment Page (`Investment.js`) and added new company pages (first batch):**
+    *   Created `src/components/investments` directory.
+    *   Created placeholder component files for 5 companies: `PersistentSystems.js`, `TorrentPower.js`, `AurobindoPharma.js`, `MuthootFinance.js`, `PiIndustries.js`.
+    *   Updated `src/components/Investment.js` to include cards for these 5 companies, making them links to their respective pages.
+    *   Updated `src/App.js` to include routes for these 5 new components.
+
+4.  **Updated Design of AI Subsections (`ML.js`, `DL.js`):**
+    *   Redesigned `src/components/technology/ai/ML.js` and `src/components/technology/ai/DL.js` with `Card` components and icons.
+
+5.  **Added Blog Post to Investment Page:**
+    *   Created `src/components/investments/blogs` directory.
+    *   Created `src/components/investments/blogs/PeterLynchCompanies.js` with the blog content.
+    *   Updated `src/components/investments/Blogs.js` to include a link to the Peter Lynch blog post.
+    *   Updated `src/App.js` to include the route for `PeterLynchCompanies`.
+
+6.  **Updated Design of existing Investment Company Cards and added Blog Section:**
+    *   Created placeholder component files for `MotilalOswal.js` and `AshokaBuildcon.js`.
+    *   Updated `src/components/Investment.js` to make the cards for "Motilal Oswal Financial Services Ltd" and "Ashoka Buildcon Ltd" links to their new pages.
+    *   Added a new "Financial & Investment Knowledge" section to `src/components/Investment.js` with a link to the `Blogs` page.
+    *   Updated `src/App.js` to include routes for `MotilalOswal`, `AshokaBuildcon`, and `Blogs`.
+
+7.  **Added next 5 company pages (second batch):**
+    *   Created placeholder component files for 5 companies: `ContainerCorporation.js`, `AdaniPorts.js`, `HindalcoIndustries.js`, `AdaniPower.js`, `Cipla.js`.
+    *   Updated `src/components/Investment.js` to include cards for these 5 companies, making them links to their respective pages.
+    *   Updated `src/App.js` to include routes for these 5 new components.
+
+**Note:** During the process, there were attempts to create additional company pages that were cancelled by the user. These were not included in the final committed changes.
