@@ -13,7 +13,7 @@ function App() {
       <main>
         <Technology />
         <Investment />
-        <Business />
+        {/* <Business /> */}
       </main>
       <Footer />
     </div>
