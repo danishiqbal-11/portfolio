@@ -2,6 +2,7 @@
 import React from 'react';
 import { Container, Alert, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { blogPosts } from '../../data/blogs';
 
 const Investment = () => {
   return (
@@ -33,11 +34,30 @@ const Investment = () => {
                   <Card.Title className="mt-3">Blogs</Card.Title>
                 </div>
                 <div className="text-center mt-auto">
-                  <span className="btn btn-primary">Read Blogs</span>
+                  <span className="btn btn-primary">Read All Blogs</span>
                 </div>
               </Card.Body>
             </Card>
           </Col>
+        </Row>
+
+        <hr className="my-5" />
+
+        <h3 className="text-center my-4">Latest Blogs</h3>
+        <Row className="justify-content-center">
+          {blogPosts.slice(0, 3).map((post) => (
+            <Col md={6} lg={4} className="mb-4" key={post.id}>
+              <Card className="h-100 shadow-sm">
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title as="h5">{post.title}</Card.Title>
+                  <Card.Text className="text-muted flex-grow-1">
+                    {post.description}
+                  </Card.Text>
+                  <Link to={post.path} className="btn btn-primary mt-auto">Read More</Link>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
         </Row>
 
         <hr className="my-5" />
