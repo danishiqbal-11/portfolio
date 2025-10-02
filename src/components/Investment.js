@@ -23,18 +23,37 @@ const Investment = () => {
 
         <hr className="my-5" />
 
+        <h3 className="text-center my-4">Financial & Investment Knowledge</h3>
+        <Row className="justify-content-center">
+          <Col md={6} className="mb-4">
+            <Card as={Link} to="/investment/blogs" className="text-decoration-none h-100 shadow-sm">
+              <Card.Body className="d-flex flex-column">
+                <div className="text-center">
+                  <i className="bi bi-book-half fs-1 text-success"></i>
+                  <Card.Title className="mt-3">Blogs</Card.Title>
+                </div>
+                <div className="text-center mt-auto">
+                  <span className="btn btn-primary">Read Blogs</span>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+
+        <hr className="my-5" />
+
         <h3 className="text-center my-4">Company Analysis</h3>
         <Row>
           <Col md={4} className="mb-4">
-            <Card className="h-100 shadow-sm">
+            <Card as={Link} to="/investment/motilal-oswal" className="text-decoration-none h-100 shadow-sm">
               <Card.Body className="d-flex flex-column">
                 <div className="text-center">
-                  <i className="bi bi-building fs-1 text-muted"></i>
+                  <i className="bi bi-building fs-1 text-primary"></i>
                   <Card.Title className="mt-3">Motilal Oswal Financial Services Ltd</Card.Title>
                 </div>
-                <Card.Text className="text-center mt-auto">
-                  Analysis coming soon.
-                </Card.Text>
+                <div className="text-center mt-auto">
+                  <span className="btn btn-primary">Read Analysis</span>
+                </div>
               </Card.Body>
             </Card>
           </Col>
@@ -52,15 +71,15 @@ const Investment = () => {
             </Card>
           </Col>
           <Col md={4} className="mb-4">
-            <Card className="h-100 shadow-sm">
+            <Card as={Link} to="/investment/ashoka-buildcon" className="text-decoration-none h-100 shadow-sm">
               <Card.Body className="d-flex flex-column">
                 <div className="text-center">
-                  <i className="bi bi-building fs-1 text-muted"></i>
+                  <i className="bi bi-building fs-1 text-primary"></i>
                   <Card.Title className="mt-3">Ashoka Buildcon Ltd</Card.Title>
                 </div>
-                <Card.Text className="text-center mt-auto">
-                  Analysis coming soon.
-                </Card.Text>
+                <div className="text-center mt-auto">
+                  <span className="btn btn-primary">Read Analysis</span>
+                </div>
               </Card.Body>
             </Card>
           </Col>
@@ -105,7 +124,7 @@ const Investment = () => {
           </Col>
           <Col md={4} className="mb-4">
             <Card as={Link} to="/investment/muthoot-finance" className="text-decoration-none h-100 shadow-sm">
-              <Card.Body className="d-flex flex-column">
+              <Card.Body className_="d-flex flex-column">
                 <div className="text-center">
                   <i className="bi bi-building fs-1 text-primary"></i>
                   <Card.Title className="mt-3">Muthoot Finance Limited</Card.Title>

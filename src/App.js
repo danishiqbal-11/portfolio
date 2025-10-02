@@ -18,6 +18,9 @@ import TorrentPower from './components/investments/TorrentPower';
 import AurobindoPharma from './components/investments/AurobindoPharma';
 import MuthootFinance from './components/investments/MuthootFinance';
 import PiIndustries from './components/investments/PiIndustries';
+import MotilalOswal from './components/investments/MotilalOswal';
+import AshokaBuildcon from './components/investments/AshokaBuildcon';
+import Blogs from './components/investments/Blogs';
 import './App.css';
 
 function App() {
@@ -41,6 +44,9 @@ function App() {
             <Route path="/investment/aurobindo-pharma" element={<AurobindoPharma />} />
             <Route path="/investment/muthoot-finance" element={<MuthootFinance />} />
             <Route path="/investment/pi-industries" element={<PiIndustries />} />
+            <Route path="/investment/motilal-oswal" element={<MotilalOswal />} />
+            <Route path="/investment/ashoka-buildcon" element={<AshokaBuildcon />} />
+            <Route path="/investment/blogs" element={<Blogs />} />
           </Routes>
         </main>
         <Footer />
