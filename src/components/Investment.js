@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Container, Alert } from 'react-bootstrap';
+import { Container, Alert, Row, Col, Card } from 'react-bootstrap';
 
 const Investment = () => {
   return (
@@ -16,9 +15,40 @@ const Investment = () => {
         <p className="lead text-center">
           I follow a hybrid investment strategy that combines the principles of Peter Lynch (growth) and Warren Buffet (value). I believe in long-term investing and the power of compounding.
         </p>
-        <p className="text-center">
-          I will be sharing my company-wise analysis and other investment-related blogs here in the future.
-        </p>
+        <hr />
+        <h3 className="text-center my-4">Company Analysis</h3>
+        <Row>
+          <Col md={4} className="mb-4">
+            <Card>
+              <Card.Body>
+                <Card.Title>Motilal Oswal Financial Services Ltd</Card.Title>
+                <Card.Text>
+                  Analysis coming soon.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4} className="mb-4">
+            <Card>
+              <Card.Body>
+                <Card.Title>Caplin Point Laboratories Ltd</Card.Title>
+                <Card.Text>
+                  Analysis coming soon.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4} className="mb-4">
+            <Card>
+              <Card.Body>
+                <Card.Title>Ashoka Buildcon Ltd</Card.Title>
+                <Card.Text>
+                  Analysis coming soon.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </Container>
     </section>
   );
