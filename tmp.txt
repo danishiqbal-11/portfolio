@@ -59,3 +59,32 @@
     *   Updated `src/App.js` to include routes for these 5 new components.
 
 **Note:** During the process, there were attempts to create additional company pages that were cancelled by the user. These were not included in the final committed changes.
+
+## Update: October 2, 2025 (Continued)
+
+**Goal:** Improve blog page design, display blog posts on Investment page, and add StatCounter.
+
+**Tasks Performed:**
+
+1.  **Improved Blog Page Design and Display on Investment Page:**
+    *   Created `src/data/blogs.js` to manage blog post data.
+    *   Updated `src/components/investments/Blogs.js` to display blog posts using `Card` components and data from `src/data/blogs.js`.
+    *   Updated `src/components/Investment.js` to display the first 3 blog posts and updated the "Financial & Investment Knowledge" section.
+    *   Updated `src/App.js` to dynamically create routes for blog posts using `blogPosts` data.
+
+2.  **Added StatCounter:**
+    *   Embedded StatCounter code into `public/index.html`.
+
+3.  **Corrected Import Paths:**
+    *   Corrected import paths for `blogPosts` in `src/components/investments/Blogs.js` and `src/components/Investment.js` to resolve deployment errors.
+
+**Remaining Tasks:**
+
+*   Continue adding the rest of the company pages to the Investment section. The next batch of 5 companies to add are:
+    *   Oracle Financial Services Software Limited
+    *   General Insurance Corporation of India
+    *   National Aluminium Company Limited
+    *   Indian Energy Exchange Limited
+    *   Chambal Fertilizers & Chemicals Limited
+
+**Note:** During the process, there were attempts to create additional company pages that were cancelled by the user. These were not included in the final committed changes.

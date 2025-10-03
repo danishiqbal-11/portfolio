@@ -40,7 +40,7 @@ function App() {
             <Route path="/technology" element={<Technology />} />
             <Route path="/investment" element={<Investment />} />
             <Route path="/caplin-point" element={<CaplinPoint />} />
-            <Route path="/technology/dsa" element={<DSA />} />
+            <Route path="/technology/dsa/*" element={<DSA />} />
             <Route path="/technology/lld" element={<LLD />} />
             <Route path="/technology/hld" element={<HLD />} />
             <Route path="/technology/ai/ml" element={<ML />} />
