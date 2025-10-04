@@ -52,7 +52,9 @@ function findMajorityElements(nums) {
 
   return result;
 }
-`
+`,
+      timeComplexity: 'O(n)',
+      spaceComplexity: 'O(1)'
     },
     {
       title: 'Josephus Problem',
@@ -66,7 +68,9 @@ function josephus(n, k) {
     return (josephus(n - 1, k) + k - 1) % n + 1;
   }
 }
-`
+`,
+      timeComplexity: 'O(n)',
+      spaceComplexity: 'O(n)'
     },
   ];
 
@@ -96,7 +100,9 @@ function findNthSpecialNumber(n) {
   }
   return result;
 }
-`
+`,
+      timeComplexity: 'O(log n)',
+      spaceComplexity: 'O(1)'
     }
   ];
 
@@ -115,6 +121,8 @@ function findNthSpecialNumber(n) {
                       <Card.Body>
                         <Card.Title>{question.title}</Card.Title>
                         <Card.Text>{question.description}</Card.Text>
+                        <Card.Text><strong>Time Complexity:</strong> {question.timeComplexity}</Card.Text>
+                        <Card.Text><strong>Space Complexity:</strong> {question.spaceComplexity}</Card.Text>
                         <Accordion>
                           <Accordion.Item eventKey="0">
                             <Accordion.Header>Pseudo Code</Accordion.Header>
@@ -143,6 +151,8 @@ function findNthSpecialNumber(n) {
                       <Card.Body>
                         <Card.Title>{question.title}</Card.Title>
                         <Card.Text>{question.description}</Card.Text>
+                        <Card.Text><strong>Time Complexity:</strong> {question.timeComplexity}</Card.Text>
+                        <Card.Text><strong>Space Complexity:</strong> {question.spaceComplexity}</Card.Text>
                         <Accordion>
                           <Accordion.Item eventKey="0">
                             <Accordion.Header>Solution</Accordion.Header>
