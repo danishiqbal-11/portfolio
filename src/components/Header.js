@@ -11,10 +11,14 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/technology">Technology</Nav.Link>
+            <NavDropdown title="Technology" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/technology/dsa">DSA</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/technology/lld">LLD</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/technology/hld">HLD</NavDropdown.Item>
+            </NavDropdown>
             <NavDropdown title="Investment" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/investment/blogs">Blogs</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/caplin-point">Caplin Point</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/investment/companies">Companies</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

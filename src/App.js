@@ -19,6 +19,7 @@ import PiIndustries from './components/investments/PiIndustries';
 import MotilalOswal from './components/investments/MotilalOswal';
 import AshokaBuildcon from './components/investments/AshokaBuildcon';
 import Blogs from './components/investments/Blogs';
+import Companies from './components/investments/Companies';
 import ContainerCorporation from './components/investments/ContainerCorporation';
 import AdaniPorts from './components/investments/AdaniPorts';
 import HindalcoIndustries from './components/investments/HindalcoIndustries';
@@ -49,6 +50,7 @@ function App() {
             <Route path="/investment/motilal-oswal" element={<MotilalOswal />} />
             <Route path="/investment/ashoka-buildcon" element={<AshokaBuildcon />} />
             <Route path="/investment/blogs" element={<Blogs />} />
+            <Route path="/investment/companies" element={<Companies />} />
             <Route path="/investment/container-corporation" element={<ContainerCorporation />} />
             <Route path="/investment/adani-ports" element={<AdaniPorts />} />
             <Route path="/investment/hindalco-industries" element={<HindalcoIndustries />} />
