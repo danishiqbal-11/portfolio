@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
 
@@ -71,6 +72,37 @@ function josephus(n, k) {
     },
   ];
 
+  const bitManipulationQuestions = [
+    {
+      title: 'Find the nth special number',
+      description: 'A special number is a number that can be represented as a sum of distinct powers of 5. For example, 30 is a special number (5^1 + 5^2 = 5 + 25 = 30), but 35 is not.',
+      solution: 
+`
+The problem is to find the nth special number, where a special number is a sum of distinct powers of 5. This is equivalent to finding the number represented by the binary representation of n, where each bit corresponds to a power of 5.
+
+For example, if n = 3, the binary representation is 11. This means the 3rd special number is 5^1 + 5^2 = 30.
+If n = 1, the binary representation is 1. This means the 1st special number is 5^1 = 5.
+If n = 2, the binary representation is 10. This means the 2nd special number is 5^2 = 25.
+
+Here is the pseudo code:
+
+function findNthSpecialNumber(n) {
+  let result = 0;
+  let power = 1;
+  while (n > 0) {
+    if ((n & 1) === 1) {
+      result += Math.pow(5, power);
+    }
+    power++;
+    n = n >> 1;
+  }
+  return result;
+}
+`,
+      link: '#'
+    }
+  ];
+
   return (
     <section id="dsa" className="py-5 bg-light">
       <Container>
@@ -89,6 +121,36 @@ function josephus(n, k) {
                         <Accordion>
                           <Accordion.Item eventKey="0">
                             <Accordion.Header>Pseudo Code</Accordion.Header>
+                            <Accordion.Body>
+                              <pre>
+                                <code>{question.solution}</code>
+                              </pre>
+                            </Accordion.Body>
+                          </Accordion.Item>
+                        </Accordion>
+                        <Card.Link href={question.link} target="_blank" rel="noopener noreferrer" className="mt-2 d-block">
+                          Solve Problem
+                        </Card.Link>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Bit Manipulation</Accordion.Header>
+            <Accordion.Body>
+              <Row>
+                {bitManipulationQuestions.map((question, index) => (
+                  <Col md={12} key={index} className="mb-3">
+                    <Card>
+                      <Card.Body>
+                        <Card.Title>{question.title}</Card.Title>
+                        <Card.Text>{question.description}</Card.Text>
+                        <Accordion>
+                          <Accordion.Item eventKey="0">
+                            <Accordion.Header>Solution</Accordion.Header>
                             <Accordion.Body>
                               <pre>
                                 <code>{question.solution}</code>
