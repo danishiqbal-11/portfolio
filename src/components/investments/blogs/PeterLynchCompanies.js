@@ -1,73 +1,109 @@
+
 import React from 'react';
-import { Container, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Alert, Badge } from 'react-bootstrap';
 
 const PeterLynchCompanies = () => {
+  const companyTypes = [
+    {
+      title: 'Slow Growers',
+      description: 'These are large, mature companies that expand only slightly faster than the economy. They typically operate in saturated industries where innovation and growth have plateaued.',
+      traits: 'Stable cash flows, generous dividends, limited expansion opportunities.',
+      investorFit: 'Best for conservative investors seeking income rather than capital appreciation.',
+      variant: 'secondary'
+    },
+    {
+      title: 'Stalwarts',
+      description: 'Stalwarts are established, financially strong companies with steady but moderate growth (10–12% annually). They’re not flashy but offer relative safety during downturns.',
+      traits: 'Strong brand, predictable earnings, defensive in recessions.',
+      investorFit: 'Suitable for investors who want stability with some growth, balancing risk and reward.',
+      variant: 'info'
+    },
+    {
+      title: 'Fast Growers',
+      description: 'These are the stars of the stock market—small to mid-sized companies with explosive growth potential. They often expand at 20–25% (or higher) annually, driven by new products, services, or markets.',
+      traits: 'High earnings growth, reinvestment over dividends, high volatility.',
+      investorFit: 'Ideal for aggressive investors who can handle risk and volatility in exchange for potentially massive returns.',
+      variant: 'success'
+    },
+    {
+      title: 'Cyclicals',
+      description: 'Cyclical companies’ performance depends heavily on the economic cycle. They boom during expansions but struggle during recessions. Industries like automobiles, airlines, and construction fall here.',
+      traits: 'Earnings fluctuate with the economy, timing is crucial.',
+      investorFit: 'Requires patience and timing skills; great for investors who can buy low in downturns and sell high in recoveries.',
+      variant: 'warning'
+    },
+    {
+      title: 'Turnarounds',
+      description: 'Also called “recoveries,” these are troubled companies facing difficulties such as high debt, falling profits, or poor management. If they succeed in restructuring, investors may reap outsized gains.',
+      traits: 'High risk, high reward, dependent on execution.',
+      investorFit: 'For contrarian investors who can tolerate uncertainty and research turnaround strategies deeply.',
+      variant: 'danger'
+    },
+    {
+      title: 'Asset Plays',
+      description: 'These are companies whose true value lies hidden in assets not fully recognized by the market—such as real estate, natural resources, patents, or subsidiaries.',
+      traits: 'Often undervalued, requires research to uncover hidden assets.',
+      investorFit: 'Suits patient investors who look beyond earnings and spot hidden value.',
+      variant: 'primary'
+    }
+  ];
+
   return (
-    <section className="py-5 bg-light">
+    <>
+      <style>
+        {`
+          .blog-header {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+          }
+          .card-title-badge {
+            font-size: 1.5rem;
+          }
+          .card-body-custom {
+            min-height: 220px;
+          }
+        `}
+      </style>
+      <div className="blog-header">
+        <Container>
+          <h1 className="text-center">From Slow Growers to Fast Growers: Understanding Peter Lynch’s Six Company Types</h1>
+        </Container>
+      </div>
       <Container>
-        <Card className="shadow-sm">
-          <Card.Body>
-            <Card.Title as="h2" className="text-center mb-4">Six Types of Companies According to Peter Lynch</Card.Title>
-            <Card.Text>
-              In One Up on Wall Street, legendary investor Peter Lynch classified companies into six broad categories. Understanding these types helps investors make informed decisions based on a company’s growth potential and risk.
-            </Card.Text>
+        <p className="lead text-center mb-5">
+          Legendary investor Peter Lynch, in his classic book <em>One Up on Wall Street</em>, introduced a simple yet powerful framework to categorize companies into six types. This framework helps investors understand the nature of a business and set realistic expectations about returns, risks, and growth potential. Let’s explore each type in detail.
+        </p>
 
-            <h3 className="mt-4">Slow Growers</h3>
-            <Card.Text>
-              Large, mature companies with limited growth. They often pay high dividends but have slow stock price appreciation.
-            </Card.Text>
-            <Card.Text className="text-muted">
-              Example: Utility companies or established consumer staples.
-            </Card.Text>
+        <Row>
+          {companyTypes.map((type, index) => (
+            <Col md={6} lg={4} key={index} className="mb-4">
+              <Card className="h-100 shadow-sm">
+                <Card.Header>
+                  <Badge bg={type.variant} className="card-title-badge">{type.title}</Badge>
+                </Card.Header>
+                <Card.Body className="d-flex flex-column card-body-custom">
+                  <Card.Text>{type.description}</Card.Text>
+                  <footer className="blockquote-footer mt-auto">
+                    <strong>Traits:</strong> {type.traits}
+                  </footer>
+                  <footer className="blockquote-footer">
+                    <strong>Investor Fit:</strong> {type.investorFit}
+                  </footer>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
 
-            <h3 className="mt-4">Stalwarts</h3>
-            <Card.Text>
-              Well-established, financially strong companies with moderate growth. They are safer investments and provide steady returns.
-            </Card.Text>
-            <Card.Text className="text-muted">
-              Example: Large multinational corporations with consistent performance.
-            </Card.Text>
-
-            <h3 className="mt-4">Fast Growers</h3>
-            <Card.Text>
-              Small or mid-sized companies expanding rapidly. These are potential “tenbaggers” if held over the long term.
-            </Card.Text>
-            <Card.Text className="text-muted">
-              Example: Emerging tech or niche consumer companies.
-            </Card.Text>
-
-            <h3 className="mt-4">Cyclicals</h3>
-            <Card.Text>
-              Companies whose performance rises and falls with economic or industry cycles. High returns are possible during boom periods, but they are risky in downturns.
-            </Card.Text>
-            <Card.Text className="text-muted">
-              Example: Airlines, steel, and automotive companies.
-            </Card.Text>
-
-            <h3 className="mt-4">Turnarounds</h3>
-            <Card.Text>
-              Struggling companies that could recover if conditions improve or management acts effectively.
-            </Card.Text>
-            <Card.Text className="text-muted">
-              Example: Companies undergoing restructuring or financial recovery.
-            </Card.Text>
-
-            <h3 className="mt-4">Asset Plays</h3>
-            <Card.Text>
-              Companies undervalued because of hidden or unrecognized assets, such as land, patents, or investments.
-            </Card.Text>
-            <Card.Text className="text-muted">
-              Example: Firms with valuable assets not reflected in stock price.
-            </Card.Text>
-
-            <h3 className="mt-4">Conclusion</h3>
-            <Card.Text>
-              Peter Lynch’s six-company framework provides a roadmap for investors to identify opportunities and set realistic expectations. By understanding which type a company belongs to, one can balance safety, growth, and risk in a portfolio.
-            </Card.Text>
-          </Card.Body>
-        </Card>
+        <Alert variant="success" className="mt-5">
+          <Alert.Heading>✅ Key Takeaway</Alert.Heading>
+          <p>
+            Successful investing is not about chasing every stock. It’s about knowing the type of company you own, setting realistic expectations, and aligning it with your personal investment style.
+          </p>
+        </Alert>
       </Container>
-    </section>
+    </>
   );
 };
 
