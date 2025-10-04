@@ -1,80 +1,72 @@
-
-
 import React from 'react';
 import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
 
 const DSA = () => {
   const arrayQuestions = [
     {
-      title: 'Find the duplicate in an array of N+1 integers.',
-      description: 'Given an array of N+1 integers, find the duplicate number. The integers are in the range [1, N].',
-      solution: 'Use a hash set to store the numbers you have seen. If you see a number that is already in the hash set, that is the duplicate.',
+      title: 'Find the majority element that appears more than N/3 times.',
+      description: 'Given an array of N integers, find all the majority elements that appear more than N/3 times.',
+      solution: 
+`
+function findMajorityElements(nums) {
+  let candidate1 = null, count1 = 0;
+  let candidate2 = null, count2 = 0;
+
+  // First pass to find candidates
+  for (const num of nums) {
+    if (num === candidate1) {
+      count1++;
+    } else if (num === candidate2) {
+      count2++;
+    } else if (count1 === 0) {
+      candidate1 = num;
+      count1 = 1;
+    } else if (count2 === 0) {
+      candidate2 = num;
+      count2 = 1;
+    } else {
+      count1--;
+      count2--;
+    }
+  }
+
+  // Second pass to verify candidates
+  count1 = 0;
+  count2 = 0;
+  for (const num of nums) {
+    if (num === candidate1) {
+      count1++;
+    } else if (num === candidate2) {
+      count2++;
+    }
+  }
+
+  const result = [];
+  if (count1 > nums.length / 3) {
+    result.push(candidate1);
+  }
+  if (count2 > nums.length / 3) {
+    result.push(candidate2);
+  }
+
+  return result;
+}
+`,
       link: '#'
     },
     {
-      title: 'Sort an array of 0s, 1s, and 2s.',
-      description: 'Given an array of 0s, 1s, and 2s, sort the array in-place.',
-      solution: 'Use the Dutch National Flag algorithm. Keep three pointers: low, mid, and high. Iterate through the array with the mid pointer. If the element is 0, swap it with the element at the low pointer and increment both low and mid. If the element is 1, just increment mid. If the element is 2, swap it with the element at the high pointer and decrement high.',
-      link: '#'
-    },
-    {
-      title: 'Find the missing number in an array.',
-      description: 'Given an array of N-1 integers in the range [1, N], find the missing number.',
-      solution: 'Calculate the sum of the first N natural numbers using the formula N*(N+1)/2. Then, calculate the sum of the elements in the array. The difference between these two sums is the missing number.',
-      link: '#'
-    },
-    {
-      title: 'Merge two sorted arrays without extra space.',
-      description: 'Given two sorted arrays, merge them into a single sorted array without using any extra space.',
-      solution: 'Start from the end of the first array and the beginning of the second array. If the element in the first array is greater than the element in the second array, swap them. Then, sort both arrays.',
-      link: '#'
-    },
-    {
-      title: 'Kadane\'s Algorithm',
-      description: 'Find the contiguous sub-array with the largest sum.',
-      solution: 'Initialize two variables: max_so_far and max_ending_here. Iterate through the array. For each element, add it to max_ending_here. If max_ending_here is greater than max_so_far, update max_so_far. If max_ending_here becomes negative, reset it to 0.',
-      link: '#'
-    },
-    {
-      title: 'Merge overlapping subintervals.',
-      description: 'Given a collection of intervals, merge all overlapping intervals.',
-      solution: 'Sort the intervals based on their start times. Then, iterate through the sorted intervals and merge any overlapping intervals.',
-      link: '#'
-    },
-    {
-      title: 'Find the majority element that appears more than N/2 times.',
-      description: 'Given an array of N integers, find the majority element.',
-      solution: 'Use Moore\'s Voting Algorithm. Initialize a candidate and a count. Iterate through the array. If the count is 0, set the candidate to the current element and the count to 1. If the current element is the same as the candidate, increment the count. Otherwise, decrement the count.',
-      link: '#'
-    },
-    {
-      title: 'Find the majority elements that appear more than N/3 times.',
-      description: 'Given an array of N integers, find all the majority elements.',
-      solution: 'Use a modified version of Moore\'s Voting Algorithm. Keep two candidates and two counts. Iterate through the array and update the candidates and counts.',
-      link: '#'
-    },
-    {
-      title: 'Grid Unique Paths',
-      description: 'Find the number of unique paths from the top-left corner to the bottom-right corner of a grid.',
-      solution: 'Use dynamic programming. Create a 2D array to store the number of unique paths to each cell. The number of unique paths to a cell is the sum of the number of unique paths to the cell above it and the cell to its left.',
-      link: '#'
-    },
-    {
-      title: 'Reverse Pairs',
-      description: 'Given an array of integers, find the number of reverse pairs.',
-      solution: 'Use a modified merge sort algorithm. While merging the two halves, count the number of reverse pairs.',
-      link: '#'
-    },
-    {
-      title: 'Search in a 2D matrix.',
-      description: 'Search for a target value in a 2D matrix where each row and column is sorted.',
-      solution: 'Start from the top-right corner of the matrix. If the target is smaller than the current element, move left. If the target is larger, move down.',
-      link: '#'
-    },
-    {
-      title: 'Pow(x, n)',
-      description: 'Implement the pow(x, n) function.',
-      solution: 'Use binary exponentiation. If n is even, calculate pow(x, n/2) and square it. If n is odd, calculate pow(x, (n-1)/2), square it, and multiply by x.',
+      title: 'Josephus Problem',
+      description: 'There are N people standing in a circle waiting to be executed. The counting out begins at some point in the circle and proceeds around the circle in a fixed direction. In each step, a certain number of people are skipped and the next person is executed. The elimination proceeds around the circle (which is becoming smaller and smaller as the executed people are removed), until only the last person remains, who is given freedom. Given the total number of persons N and a number k which indicates that k-1 persons are skipped and kth person is killed in circle. The task is to choose the place in the initial circle so that you are the last one remaining and so survive.',
+      solution: 
+`
+function josephus(n, k) {
+  if (n === 1) {
+    return 1;
+  } else {
+    return (josephus(n - 1, k) + k - 1) % n + 1;
+  }
+}
+`,
       link: '#'
     },
   ];
@@ -96,9 +88,11 @@ const DSA = () => {
                         <Card.Text>{question.description}</Card.Text>
                         <Accordion>
                           <Accordion.Item eventKey="0">
-                            <Accordion.Header>Solution</Accordion.Header>
+                            <Accordion.Header>Pseudo Code</Accordion.Header>
                             <Accordion.Body>
-                              {question.solution}
+                              <pre>
+                                <code>{question.solution}</code>
+                              </pre>
                             </Accordion.Body>
                           </Accordion.Item>
                         </Accordion>
