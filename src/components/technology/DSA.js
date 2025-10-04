@@ -52,8 +52,7 @@ function findMajorityElements(nums) {
 
   return result;
 }
-`,
-      link: '#'
+`
     },
     {
       title: 'Josephus Problem',
@@ -67,8 +66,7 @@ function josephus(n, k) {
     return (josephus(n - 1, k) + k - 1) % n + 1;
   }
 }
-`,
-      link: '#'
+`
     },
   ];
 
@@ -98,8 +96,7 @@ function findNthSpecialNumber(n) {
   }
   return result;
 }
-`,
-      link: '#'
+`
     }
   ];
 
@@ -128,9 +125,7 @@ function findNthSpecialNumber(n) {
                             </Accordion.Body>
                           </Accordion.Item>
                         </Accordion>
-                        <Card.Link href={question.link} target="_blank" rel="noopener noreferrer" className="mt-2 d-block">
-                          Solve Problem
-                        </Card.Link>
+                        
                       </Card.Body>
                     </Card>
                   </Col>
@@ -158,9 +153,7 @@ function findNthSpecialNumber(n) {
                             </Accordion.Body>
                           </Accordion.Item>
                         </Accordion>
-                        <Card.Link href={question.link} target="_blank" rel="noopener noreferrer" className="mt-2 d-block">
-                          Solve Problem
-                        </Card.Link>
+                        
                       </Card.Body>
                     </Card>
                   </Col>
