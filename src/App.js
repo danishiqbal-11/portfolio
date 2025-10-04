@@ -20,13 +20,11 @@ import MotilalOswal from './components/investments/MotilalOswal';
 import AshokaBuildcon from './components/investments/AshokaBuildcon';
 import Blogs from './components/investments/Blogs';
 import Companies from './components/investments/Companies';
-import DSABlogs from './components/technology/DSABlogs';
 import ContainerCorporation from './components/investments/ContainerCorporation';
 import AdaniPorts from './components/investments/AdaniPorts';
 import HindalcoIndustries from './components/investments/HindalcoIndustries';
 import AdaniPower from './components/investments/AdaniPower';
 import { blogPosts } from './data/blogs'; // Import blog posts data
-import { dsaBlogs } from './data/dsaBlogs'; // Import dsa blogs data
 import './App.css';
 
 function App() {
@@ -44,7 +42,6 @@ function App() {
             <Route path="/technology/hld" element={<HLD />} />
             <Route path="/technology/ai/ml" element={<ML />} />
             <Route path="/technology/ai/dl" element={<DL />} />
-            <Route path="/technology/dsa/blogs" element={<DSABlogs />} />
             <Route path="/investment/persistent-systems" element={<PersistentSystems />} />
             <Route path="/investment/torrent-power" element={<TorrentPower />} />
             <Route path="/investment/aurobindo-pharma" element={<AurobindoPharma />} />
@@ -59,9 +56,6 @@ function App() {
             <Route path="/investment/hindalco-industries" element={<HindalcoIndustries />} />
             <Route path="/investment/adani-power" element={<AdaniPower />} />
             {blogPosts.map((post) => (
-              <Route key={post.id} path={post.path} element={<post.component />} />
-            ))}
-            {dsaBlogs.map((post) => (
               <Route key={post.id} path={post.path} element={<post.component />} />
             ))}
           </Routes>
