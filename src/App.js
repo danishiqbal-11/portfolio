@@ -1,10 +1,8 @@
-
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import About from './components/About';
 import Technology from './components/Technology';
-import Investment from './components/Investment';
 // import Business from './components/Business';
 import Footer from './components/Footer';
 import CaplinPoint from './components/CaplinPoint';
@@ -25,7 +23,6 @@ import ContainerCorporation from './components/investments/ContainerCorporation'
 import AdaniPorts from './components/investments/AdaniPorts';
 import HindalcoIndustries from './components/investments/HindalcoIndustries';
 import AdaniPower from './components/investments/AdaniPower';
-import Cipla from './components/investments/Cipla';
 import { blogPosts } from './data/blogs'; // Import blog posts data
 import './App.css';
 
@@ -38,9 +35,8 @@ function App() {
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/technology" element={<Technology />} />
-            <Route path="/investment" element={<Investment />} />
             <Route path="/caplin-point" element={<CaplinPoint />} />
-            <Route path="/technology/dsa/*" element={<DSA />} />
+            <Route path="/technology/dsa" element={<DSA />} />
             <Route path="/technology/lld" element={<LLD />} />
             <Route path="/technology/hld" element={<HLD />} />
             <Route path="/technology/ai/ml" element={<ML />} />
@@ -57,7 +53,6 @@ function App() {
             <Route path="/investment/adani-ports" element={<AdaniPorts />} />
             <Route path="/investment/hindalco-industries" element={<HindalcoIndustries />} />
             <Route path="/investment/adani-power" element={<AdaniPower />} />
-            <Route path="/investment/cipla" element={<Cipla />} />
             {blogPosts.map((post) => (
               <Route key={post.id} path={post.path} element={<post.component />} />
             ))}
