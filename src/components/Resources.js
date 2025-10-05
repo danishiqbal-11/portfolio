@@ -6,7 +6,7 @@ const Resources = () => {
     <section id="resources" className="py-5 bg-light">
       <Container>
         <div className="text-center mb-5">
-          <h2 className="mb-4"><i className="bi bi-collection-fill text-primary"></i> Resources</h2>
+          <h2 className="mb-4"><i className="bi bi-collection-fill text-primary"></i> This is the Resources Page</h2>
         </div>
         <Row>
           <Col md={4} className="mb-4">

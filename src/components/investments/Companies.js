@@ -13,7 +13,7 @@ const Companies = () => {
         <Alert variant="warning" className="shadow-sm">
           <Alert.Heading><i className="bi bi-exclamation-triangle-fill"></i> Disclaimer</Alert.Heading>
           <p>
-            I am not a SEBI registered advisor. The information provided here is for educational purposes only. I may have personal holdings in the companies mentioned. Please do your own research before investing.
+            I am not a SEBI registered investment advisor. The content shared is only for educational and informational purposes and should not be considered as investment advice. I may have positions in the securities mentioned. Please consult your financial advisor before making any investment decisions.
           </p>
         </Alert>
         <Row>
