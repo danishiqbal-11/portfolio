@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import About from './components/About';
+import Investment from './components/Investment';
 import Technology from './components/Technology';
 // import Business from './components/Business';
 import Footer from './components/Footer';
@@ -36,6 +37,7 @@ function App() {
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/technology" element={<Technology />} />
+            <Route path="/investment" element={<Investment />} />
             <Route path="/caplin-point" element={<CaplinPoint />} />
             <Route path="/technology/dsa" element={<DSA />} />
             <Route path="/technology/lld" element={<LLD />} />
