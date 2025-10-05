@@ -10,6 +10,12 @@ const Companies = () => {
         <div className="text-center mb-5">
           <h2 className="mb-4"><i className="bi bi-building text-primary"></i> Company Analysis</h2>
         </div>
+        <Alert variant="warning" className="shadow-sm">
+          <Alert.Heading><i className="bi bi-exclamation-triangle-fill"></i> Disclaimer</Alert.Heading>
+          <p>
+            I am not a SEBI registered advisor. The information provided here is for educational purposes only. I may have personal holdings in the companies mentioned. Please do your own research before investing.
+          </p>
+        </Alert>
         <Row>
           <Col md={4} className="mb-4">
             <Card as={Link} to="/caplin-point" className="text-decoration-none h-100 shadow-sm">

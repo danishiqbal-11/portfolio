@@ -15,14 +15,7 @@ const Investment = () => {
           </p>
         </div>
 
-        <Alert variant="warning" className="shadow-sm">
-          <Alert.Heading><i className="bi bi-exclamation-triangle-fill"></i> Disclaimer</Alert.Heading>
-          <p>
-            I am not a SEBI registered advisor. The information provided here is for educational purposes only. I may have personal holdings in the companies mentioned. Please do your own research before investing.
-          </p>
-        </Alert>
-
-        <hr className="my-5" />
+        
 
         <h3 className="text-center my-4">Financial & Investment Knowledge</h3>
         <Row className="justify-content-center">
