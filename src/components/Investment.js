@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Container, Alert, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogs';
 
